@@ -3,12 +3,30 @@ import com.mongodb.*;
 import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 public class DaoMongo {
-    private MongoClient mongo = new MongoClient();
-    private MongoDatabase database = mongo.getDatabase("bd_saep");
+    /*private MongoClient mongo = new MongoClient();
+    private MongoDatabase database = mongo.getDatabase("bd_saep");*/
+
+    public DaoMongo() throws IOException {}
+
+    private MongoDatabase banco () throws IOException {
+        Properties prop = new Properties();
+        FileInputStream file = new FileInputStream("./properties/conexaobanco.properties");
+        prop.load(file);
+        String banco = prop.getProperty("prop.banco.name");
+        MongoClient mongo = new MongoClient();
+        MongoDatabase database = mongo.getDatabase(banco);
+        return database;
+    }
+
+    MongoDatabase database = banco();
 
     public boolean inserirDoc(String objetoJson, String collection) {
         boolean finalizou = false;
