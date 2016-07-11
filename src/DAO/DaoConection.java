@@ -1,4 +1,3 @@
-package DAO;
 
 import br.ufg.inf.es.saep.sandbox.dominio.*;
 import com.google.gson.Gson;
@@ -84,23 +83,23 @@ public class DaoConection {
         return false;
     }
 
-    public boolean editarNotaParecerPorId(String id, Avaliavel valor) {
+    public boolean editarNotaParecerPorId(String id, String nomeClasse, Avaliavel valor) {
         String avaliavelJson = gson.toJson(valor);
-        if (mongo.excluirCampoDoc("parecer", "id", id, "notas", "avaliavel", avaliavelJson, "avaliavel", "")) {
+        if (mongo.excluirCampoDoc("parecer", "id", id, "notas", nomeClasse, avaliavelJson, nomeClasse, "")) {
             return true;
         }
         return false;
     }
 
     public boolean editarParecerPorId(String id, String campo, String valor) {
-        if (mongo.atualizarDoc("parecer", "id", id, campo, valor) {
+        if (mongo.atualizarDoc("parecer", "id", id, campo, valor)) {
             return true;
         }
         return false;
     }
 
     public boolean editarResolucaoPorId(String id, String campo, String valor) {
-        if (mongo.atualizarDoc("resolucao", "id", id, campo, valor) {
+        if (mongo.atualizarDoc("resolucao", "id", id, campo, valor)) {
             return true;
         }
         return false;

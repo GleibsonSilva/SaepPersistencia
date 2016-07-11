@@ -1,6 +1,4 @@
-package Comunicacao;
 
-import DAO.DaoConection;
 import br.ufg.inf.es.saep.sandbox.dominio.*;
 
 import java.util.List;

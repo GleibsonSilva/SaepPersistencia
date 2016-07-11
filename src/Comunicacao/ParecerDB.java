@@ -1,6 +1,4 @@
-package Comunicacao;
 
-import DAO.DaoConection;
 import br.ufg.inf.es.saep.sandbox.dominio.*;
 
 public abstract class ParecerDB implements ParecerRepository{
@@ -11,7 +9,7 @@ public abstract class ParecerDB implements ParecerRepository{
     }
 
     public void removeNota(String id, Avaliavel original) {
-        banco.editarNotaParecerPorId(id, original);
+        banco.editarNotaParecerPorId(id, Avaliavel.class.getName(), original);
     }
 
     public void persisteParecer(Parecer parecer) {

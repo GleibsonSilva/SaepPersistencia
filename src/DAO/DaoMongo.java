@@ -1,6 +1,6 @@
-package DAO;
 
 import com.mongodb.*;
+import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 
 import java.util.ArrayList;
@@ -46,8 +46,8 @@ public class DaoMongo {
         boolean finalizou = false;
         try {
             database.getCollection(collection).findOneAndUpdate(new Document(campo, valor)
-                    .append(key, new Document(campo2, valor2), new Document("$set",
-                            new Document(campoUpdate, valorUpdate))));
+                    .append(key, new Document(campo2, valor2)), new Document("$set",
+                    new Document(campoUpdate, valorUpdate)));
             finalizou = true;
         } catch (MongoException e) {
             e.getStackTrace();
