@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="saepbanco:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="saep.war">
+      <element id="artifact" artifact-name="saepbanco:war exploded" />
+    </root>
+  </artifact>
+</component>
