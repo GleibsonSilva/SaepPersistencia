@@ -2,7 +2,6 @@ package com.ufg.saep.dao;
 
 import br.ufg.inf.es.saep.sandbox.dominio.*;
 import com.google.gson.Gson;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;

@@ -3,7 +3,6 @@ package com.ufg.saep.dao;
 import com.mongodb.*;
 import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -11,9 +10,6 @@ import java.util.List;
 import java.util.Properties;
 
 public class DaoMongo {
-    /*private MongoClient mongo = new MongoClient();
-    private MongoDatabase database = mongo.getDatabase("bd_saep");*/
-
     public DaoMongo() throws IOException {}
 
     /**
