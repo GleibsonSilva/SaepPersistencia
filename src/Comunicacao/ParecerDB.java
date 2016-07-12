@@ -1,8 +1,12 @@
 
 import br.ufg.inf.es.saep.sandbox.dominio.*;
 
+import java.io.IOException;
+
 public abstract class ParecerDB implements ParecerRepository{
     private DaoConection banco = new DaoConection();
+
+    protected ParecerDB() throws IOException {}
 
     public void adicionaNota(String id, Nota nota) {
         banco.adicionarNotaParecer(id, nota);

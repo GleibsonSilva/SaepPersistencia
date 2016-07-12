@@ -1,10 +1,14 @@
 
 import br.ufg.inf.es.saep.sandbox.dominio.*;
 
+import java.io.IOException;
 import java.util.List;
 
 public class ResolucaoDB implements ResolucaoRepository{
     private DaoConection banco = new DaoConection();
+
+    public ResolucaoDB() throws IOException {
+    }
 
     public Resolucao byId(String id) {
         return banco.buscarResolucaoPorId(id);
