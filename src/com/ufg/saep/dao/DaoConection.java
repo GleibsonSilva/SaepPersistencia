@@ -1,3 +1,4 @@
+package com.ufg.saep.dao;
 
 import br.ufg.inf.es.saep.sandbox.dominio.*;
 import com.google.gson.Gson;
@@ -8,7 +9,7 @@ import java.util.List;
 
 public class DaoConection {
     /**
-     * Variáveis de inicialização do serializador JSON e Conexao com o banco (DaoMongo).
+     * Variáveis de inicialização do serializador JSON e Conexao com o banco (com.ufg.saep.dao.DaoMongo).
      */
     private Gson gson = new Gson();
     private DaoMongo mongo = new DaoMongo();

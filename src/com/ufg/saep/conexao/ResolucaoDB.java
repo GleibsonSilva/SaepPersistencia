@@ -1,5 +1,7 @@
+package com.ufg.saep.conexao;
 
 import br.ufg.inf.es.saep.sandbox.dominio.*;
+import com.ufg.saep.dao.DaoConection;
 
 import java.io.IOException;
 import java.util.List;

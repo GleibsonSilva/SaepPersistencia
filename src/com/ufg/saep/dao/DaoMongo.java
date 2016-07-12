@@ -1,3 +1,4 @@
+package com.ufg.saep.dao;
 
 import com.mongodb.*;
 import com.mongodb.client.MongoDatabase;

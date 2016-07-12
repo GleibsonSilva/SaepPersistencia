@@ -1,9 +1,11 @@
+package com.ufg.saep.conexao;
 
 import br.ufg.inf.es.saep.sandbox.dominio.*;
+import com.ufg.saep.dao.DaoConection;
 
 import java.io.IOException;
 
-public abstract class ParecerDB implements ParecerRepository{
+public class ParecerDB implements ParecerRepository{
     private DaoConection banco = new DaoConection();
 
     protected ParecerDB() throws IOException {}
